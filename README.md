@@ -66,8 +66,9 @@ timelinePicker.setOnSelectedTimeRangeChangedListener { from, to ->
         }
 ```
 
-<img src="screenshots/screen3.jpg" alt="Colored Time Range Bar Selector" width="256">
+<img src="screenshots/screen3.jpg" alt="Colored Time Range Bar Selector">
 
 ## Do you like it?
 Use it and develop it as you like and buy me a cup of tea :)
-<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Cup of Tea', '#ff5e00', 'D1D775AP');kofiwidget2.draw();</script>
+
+<a href='https://ko-fi.com/D1D775AP' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
