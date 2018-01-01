@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E40274</color>
+    <color name="colorPrimaryDark">#A01F80</color>
+    <color name="colorAccent">#009547</color>
+
+    <color name="loading_backgroundColor">#7b263238</color>
+    <color name="lightBackgroundColor">#fff</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorGrey50">#FAFAFA</color>
+    <color name="colorGrey900">#212121</color>
+
+    <color name="colorDeepOrange">#EC7B23</color>
+
+    <color name="colorRed900">#B71C1C</color>
+
+    <color name="colorLightGreenA100">#CCFF90</color>
+    <color name="colorLightGreenA50">#F1F8E9</color>
+
+    <color name="colorBlue">#006695</color>
+
+    <color name="colorBlueGrey400">#78909C</color>
+    <color name="colorBlueGrey500">#607D8B</color>
+    <color name="colorBlueGrey600">#546E7A</color>
+    <color name="colorBlueGrey900">#263238</color>
+    <color name="colorBlueGrey800">#37474F</color>
+
+    <color name="colorLaunchGrey">#1e1e23</color>
+    <color name="windowBackground">#fff</color>
+
+    <color name="textPrimary">#000000</color>
+    <color name="textSecondary">#666666</color>
+    <color name="separatorLight">#DDDDDD</color>
+    <color name="separatorDark">#AAAAAA</color>
+
+</resources>

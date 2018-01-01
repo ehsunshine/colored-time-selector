@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="fraction_default_height">16dp</dimen>
+    <dimen name="fraction_label_default_text_size">16sp</dimen>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fraction_default_color">#000000</color>
+    <color name="selector_default_color">#FFE900</color>
+    <color name="timeline_default_color">#E31E2F</color>
+    <color name="available_time_default_color">#9ABD36</color>
+</resources>

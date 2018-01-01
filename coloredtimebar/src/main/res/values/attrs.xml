@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimelineView">
+        <attr name="timeRange" format="string" />
+        <attr name="fractionTextInterval" format="integer" />
+        <attr name="barWidth" format="dimension" />
+        <attr name="barColorAvailable" format="color" />
+        <attr name="barColorNotAvailable" format="color" />
+        <attr name="barColorHighlight" format="color" />
+        <attr name="fractionPrimaryTextColor" format="color" />
+        <attr name="fractionSecondaryTextColor" format="color" />
+        <attr name="fractionTextSize" format="dimension" />
+        <attr name="fractionLineWidth" format="dimension" />
+        <attr name="fractionLineLength" format="dimension" />
+        <attr name="fractionLineColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TimelinePickerView">
+        <attr name="pickerDrawable" format="reference" />
+        <attr name="stepSize" format="integer" />
+    </declare-styleable>
+</resources>

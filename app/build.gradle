@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "de.ehsun.smartbooking"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".staging"
+
+            buildConfigField 'String', 'BASE_URL', '"http://roombooking.getsandbox.com/"'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BASE_URL', '"http://roombooking.getsandbox.com/"'
+        }
+    }
+
+    sourceSets {
+        String sharedTestDir = 'src/sharedtest/java'
+        test {
+            java.srcDir sharedTestDir
+        }
+        androidTest {
+            java.srcDir sharedTestDir
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofitVersion"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$rootProject.ext.okhttpVersion"
+
+    //OkHTTP
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.ext.rxKotlinVersion"
+
+    //Gson
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.ext.picassoVersion"
+    implementation "com.jakewharton.picasso:picasso2-okhttp3-downloader:$rootProject.ext.picassoOkHttp"
+
+    //Support Library
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibrariesVersion"
+    implementation "com.android.support:design:$rootProject.ext.supportLibrariesVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.ext.supportLibrariesVersion"
+
+    //Dagger 2
+    implementation "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
+
+    //JodaTime
+    implementation "net.danlew:android.joda:$rootProject.ext.jodaTimeVersion"
+
+    //Page Indicator
+    implementation "com.github.JakeWharton:ViewPagerIndicator:$rootProject.ext.viewPagerIndicatorVersion"
+
+    //Test
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    testImplementation "joda-time:joda-time:$rootProject.ext.jodaTimeVersion"
+    testImplementation "com.nhaarman:mockito-kotlin:$rootProject.ext.mockitoKotlin"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$rootProject.ext.okhttpVersion"
+
+    //Android Test
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.ext.testRunnerVersion"
+    implementation project(':coloredtimebar')
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="false">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height_expanded">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsingToolbar_height_expanded"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="@dimen/keyline_1"
+            app:expandedTitleMarginStart="@dimen/keyline_1"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/appbar_height_collapsed"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ToolBarStyle" />
+
+            <RelativeLayout
+                android:id="@+id/linear_layout_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_collapseMode="pin">
+
+                <ImageView
+                    android:id="@+id/previousDateImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/spacing_normal"
+                    android:layout_toStartOf="@id/currentDateTextView"
+                    android:contentDescription="@string/left"
+                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    android:tint="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/currentDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_xxx_large"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/nextDateImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_toEndOf="@id/currentDateTextView"
+                    android:contentDescription="@string/right"
+                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    android:tint="@color/colorWhite" />
+            </RelativeLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_tools_container"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/subtitle_height"
+            android:layout_gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/filterViewGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/filterImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/keyline_1"
+                    android:layout_marginLeft="@dimen/keyline_1"
+                    android:layout_marginRight="@dimen/keyline_1"
+                    android:layout_marginStart="@dimen/keyline_1"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:contentDescription="@string/filters"
+                    android:src="@drawable/ic_tune_black_24dp"
+                    android:tint="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/filterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_1"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:layout_toEndOf="@id/filterImageButton"
+                    android:text="@string/filters"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_normal" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/sortImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/keyline_1"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:contentDescription="@string/sort"
+                android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/sortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/keyline_1"
+                android:layout_marginTop="@dimen/spacing_normal"
+                android:layout_toStartOf="@id/sortImageButton"
+                android:text="@string/sort"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_normal"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/booksRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/loadingContainer"
+        layout="@layout/view_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+</android.support.design.widget.CoordinatorLayout>

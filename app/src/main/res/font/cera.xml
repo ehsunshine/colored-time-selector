@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        app:font="@font/cera_thin"
+        app:fontStyle="normal"
+        app:fontWeight="200" />
+    <font
+        app:font="@font/cera_medium"
+        app:fontStyle="normal"
+        app:fontWeight="400" />
+    <font
+        app:font="@font/cera_italic"
+        app:fontStyle="italic"
+        app:fontWeight="400" />
+    <font
+        app:font="@font/cera_bold"
+        app:fontStyle="normal"
+        app:fontWeight="800" />
+</font-family>

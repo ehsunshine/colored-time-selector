@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuSortByLocation"
+        android:title="@string/menu_sort_by_location" />
+    <item
+        android:id="@+id/menuSortByName"
+        android:title="@string/menu_sort_by_name" />
+    <item
+        android:id="@+id/menuSortBySize"
+        android:title="@string/menu_sort_by_size" />
+    <item
+        android:id="@+id/menuSortByCapacity"
+        android:title="@string/menu_sort_by_capacity" />
+</menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:font="@font/cera_thin"
+        android:fontStyle="normal"
+        android:fontWeight="200" />
+    <font
+        android:font="@font/cera_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400" />
+    <font
+        android:font="@font/cera_italic"
+        android:fontStyle="italic"
+        android:fontWeight="400" />
+    <font
+        android:font="@font/cera_bold"
+        android:fontStyle="normal"
+        android:fontWeight="800" />
+</font-family>
