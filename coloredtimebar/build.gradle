@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'colored-time-range-selector'
+
+    publishedGroupId = 'de.ehsun.coloredtimebar'
+    libraryName = 'ColoredTimeRangeSelector'
+    artifact = 'coloredtimebar'
+
+    libraryDescription = 'A smart colored time range selector. Users can select just free time with a handy colorful range selector.'
+
+    siteUrl = 'https://github.com/ehsunshine/colored-time-selector'
+    gitUrl = 'https://github.com/ehsunshine/colored-time-selector'
+
+    libraryVersion = '1.0'
+
+    developerId = 'ehsun'
+    developerName = 'Ehsan Mehranvari'
+    developerEmail = 'ehsunshine@gmail.com'
+
+    licenseName = 'GNU General Public License v3.0'
+    licenseUrl = 'https://github.com/ehsunshine/colored-time-selector/blob/master/LICENSE'
+    allLicenses = ["GPL-3.0"]
+}
 
 android {
     compileSdkVersion 27
@@ -32,8 +56,10 @@ dependencies {
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     androidTestImplementation "com.android.support.test:runner:$rootProject.ext.testRunnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 repositories {
     mavenCentral()
 }
+apply from: '../gradle/installv1.gradle'
+apply from: '../gradle/bintrayv1.gradle'

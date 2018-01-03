@@ -2,8 +2,8 @@
 A smart colored time range selector. Users can select just free time with a handy colorful range selector.
 
 ## Screen Shots
-<img src="screenshots/screen1.jpg" alt="Colored Time Range Bar Selector" width="256">
-<img src="screenshots/screen2.jpg" alt="Colored Time Range Bar Selector" width="256">
+<img src="https://github.com/ehsunshine/colored-time-selector/blob/master/screenshots/screen1.jpg" alt="Colored Time Range Bar Selector" width="256">
+<img src="https://github.com/ehsunshine/colored-time-selector/blob/master/screenshots/screen2.jpg" alt="Colored Time Range Bar Selector" width="256">
 
 ## Features
 
@@ -13,6 +13,15 @@ A smart colored time range selector. Users can select just free time with a hand
 - Two different type of view, with `Selector` and without it
 
 ## Use it
+
+```gradle
+**build.gradle**
+
+	dependencies {
+	  implementation 'de.ehsun.coloredtimebar:coloredtimebar:1.0'
+	}
+```
+
 In your layout use the ColoredTimeBar as below:
 
 ```xml
@@ -66,7 +75,7 @@ timelinePicker.setOnSelectedTimeRangeChangedListener { from, to ->
         }
 ```
 
-<img src="screenshots/screen3.jpg" alt="Colored Time Range Bar Selector">
+<img src="https://github.com/ehsunshine/colored-time-selector/blob/master/screenshots/screen3.jpg" alt="Colored Time Range Bar Selector">
 
 ## Do you like it?
 Use it and develop it as you like and buy me a cup of tea :)
