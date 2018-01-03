@@ -14,12 +14,11 @@ A smart colored time range selector. Users can select just free time with a hand
 
 ## Use it
 
-```gradle
 **build.gradle**
-
-	dependencies {
-	  implementation 'de.ehsun.coloredtimebar:coloredtimebar:1.0'
-	}
+```gradle
+dependencies {
+    implementation 'de.ehsun.coloredtimebar:coloredtimebar:1.0'
+}
 ```
 
 In your layout use the ColoredTimeBar as below:
