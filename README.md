@@ -1,9 +1,10 @@
-# Colored Time Range Selector
-A smart colored time range selector. Users can select just free time with a handy colorful range selector.
 [![Download](https://api.bintray.com/packages/ehsun/maven/colored-time-range-selector/images/download.svg)](https://bintray.com/ehsun/maven/colored-time-range-selector/_latestVersion)
 [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-colored--time--selector-green.svg?style=flat )]( https://android-arsenal.com/details/1/6634 )
 [![GitHub license](https://img.shields.io/github/license/ehsunshine/colored-time-selector.svg)](https://github.com/ehsunshine/colored-time-selector/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/ehsunshine/colored-time-selector.svg?branch=master)](https://travis-ci.org/ehsunshine/colored-time-selector)
+
+# Colored Time Range Selector
+A smart colored time range selector. Users can select just free time with a handy colorful range selector.
 
 ## Screen Shots
 <img src="https://github.com/ehsunshine/colored-time-selector/blob/master/screenshots/screen1.jpg" alt="Colored Time Range Bar Selector" width="256">
