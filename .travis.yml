@@ -26,9 +26,6 @@ sudo: false
 before_install:
  - chmod +x gradlew
 
-script:
- - chmod +x ./gradlew build connectedCheck
-
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
