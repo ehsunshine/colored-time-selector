@@ -31,8 +31,6 @@ sudo: false
 
 before_install:
  - chmod +x gradlew
- - yes | sdkmanager "platforms;android-27"
- - yes | sdkmanager "Build-Tools;android-26.0.2"
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
