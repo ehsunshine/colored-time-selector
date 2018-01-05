@@ -5,13 +5,14 @@ android:
     - tools
     - platform-tools
     - tools
-    - build-tools-27.0.2
-    - android-27
+    - build-tools-26.0.2
+    - android-26
     - extra-google-m2repository
     - extra-android-m2repository
   licenses:
     - android-sdk-license-5be876d5
     - android-sdk-license-c81a61d9
+    - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
