@@ -61,5 +61,5 @@ dependencies {
 repositories {
     mavenCentral()
 }
-apply from: '../gradle/installv1.gradle'
-apply from: '../gradle/bintrayv1.gradle'
+//apply from: '../gradle/installv1.gradle'
+//apply from: '../gradle/bintrayv1.gradle'
