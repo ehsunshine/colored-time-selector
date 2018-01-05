@@ -2,8 +2,9 @@ language: android
 
 env:
   global:
-    - ANDROID_TARGET=android-27
-    - ANDROID_ABI=armeabi-v7a
+    - ANDROID_API_LEVEL=27
+    - ANDROID_BUILD_TOOLS_VERSION=27.0.2
+    - ANDROID_ABI=google_apis/armeabi-v7a
 
 android:
   components:
@@ -14,7 +15,7 @@ android:
     - android-27
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-x64-android-27
+    - sys-img-armeabi-v7a-addon-google_apis-google-$ANDROID_API_LEVEL
 
   licenses:
     - '.+'
@@ -40,7 +41,7 @@ before_script:
 
 script:
   - android list targets
-  - echo no | android create avd --force -n test -t android-27 --abi "no ABIs"
+   - echo no | android create avd --force -n test -t "Google Inc.:Google APIs:"$ANDROID_API_LEVEL --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
