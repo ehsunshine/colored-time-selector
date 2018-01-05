@@ -40,8 +40,8 @@ before_script:
 
 script:
   - android list targets
-  - echo no | android create avd --force -n test -t android-27 --abi x64 -no-accel
-  - emulator -avd test -no-skin -no-audio -no-window &
+  - echo no | android create avd --force -n Android 8.1.0 -t android-27 --abi x64
+  - emulator -avd Android 8.1.0 -no-skin -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
   - ./gradlew installDebug
