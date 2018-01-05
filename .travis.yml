@@ -5,8 +5,8 @@ android:
     - tools
     - platform-tools
     - tools
-    - build-tools-26.0.2
-    - android-26
+    - build-tools-27.0.2
+    - android-27
     - extra-google-m2repository
     - extra-android-m2repository
 
@@ -22,6 +22,9 @@ notifications:
   email: false
 
 sudo: false
+
+before_install:
+ - chmod +x gradlew
 
 script:
  - chmod +x ./gradlew build connectedCheck
